@@ -1,0 +1,148 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <title>Events Tracker</title>
+    <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+        <link rel="stylesheet" href="/public/stylesheets/themes/project.css" />
+        <link rel="stylesheet" href="/public/stylesheets/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/public/javascripts/index.js"></script>
+
+    </head>
+
+    <body>
+
+    <!-- Start of Home page -->
+    <div data-role="page" id="home">
+        <!--  home page header -->
+        <div data-role="header" data-theme='a'>
+
+        <h1>Event Calendar</h1>
+        <div data-role="navbar" data-theme='a'>
+            <ul>
+            <li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+            <li><a href="#page1" data-role="button" data-icon="carat-d">Add Event</a></li>
+            <li><a href="#page2" data-role="button" data-icon="carat-d">Event List</a></li>
+            </ul>
+        </div><!-- /navbar -->
+
+        </div>
+        <!--  home page content -->
+        <div data-role="content" data-theme='a'>
+        <h2> Event tracker to keep track of all your parties!!!</h2>
+        </div>
+
+        <!--  home page footer -->
+        <div data-role="footer" data-theme='a'>
+        <h1>Copyright 2020 by Tashib Alam</h1>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="page1">
+        <!--  page1 page header -->
+        <div data-role="header" data-theme='a'>
+        <h1>Event Calendar</h1>
+        <div data-role="navbar" data-theme='a'>
+            <ul>
+            <li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+            <li><a href="#page1" data-role="button" data-icon="carat-d">Add Event</a></li>
+            <li><a href="#page2" data-role="button" data-icon="carat-d">Event List</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        </div>
+        <!--  page content -->
+        <div data-role="content" data-theme='a'>
+        <p>Event Name</p>
+        <input type="text" value="" id="EventName" />
+        <p>Choose the Event date</p>
+        <input type="date" value="" id="Date" />
+        <p>Notes</p>
+        <input type="text" value="" id="Notes">
+        <input type="button" value="Click To Create Event" id="AddEvent" />
+        </div>
+
+        <!--  CreateEvent page footer -->
+        <div data-role="footer" data-theme='a'>
+        <h1>Copyright 2020 by Tashib Alam</h1>
+        </div>
+    </div>
+
+
+
+    <!-- Start of page 2 -->
+    <div data-role="page" id="page2">
+        <!--  page 2 header -->
+        <div data-role="header" data-theme='a'>
+        <h1>Event Calendar</h1>
+        <div data-role="navbar" data-theme='a'>
+            <ul>
+            <li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+            <li><a href="#page1" data-role="button" data-icon="carat-d">Add Event</a></li>
+            <li><a href="#page2" data-role="button" data-icon="carat-d">Event List</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        </div>
+        <!--  page 2 content -->
+        <div data-role="content" data-theme='a'>
+        <p id="fillEvents"> No Events. <a data-transition='fade' href='#page1'>Click Here to Add an Event</a> </p>
+        <div id="divEventlist"></div>
+        <input type="button" value="Sort by Date" id="sortDate" />
+        </div>
+
+        <!--  page 2 footer -->
+        <div data-role="footer" data-theme='a'>
+        <h1>Copyright 2020 by Tashib Alam</h1>
+        </div>
+    </div>
+    </div>
+
+    <!-- Start of page 3 -->
+    <div data-role="page" id="page3">
+        <!-- page 3 header -->
+        <div data-role="header" data-theme='a'>
+        <h1>Event Calendar</h1>
+        <div data-role="navbar" data-theme='a'>
+            <ul>
+            <li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+            <li><a href="#page1" data-role="button" data-icon="carat-d">Add Event</a></li>
+            <li><a href="#page2" data-role="button" data-icon="carat-d">Event List</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        </div>
+        <!-- page 3 content -->
+        <div data-role="content" data-theme='a'>
+        <p> Event Details</p>
+        <p id="DateparmHere" hidden>change1</p> <!-- hidden    a place to stash the user ID -->
+        <p id="oneEvent"></p>
+        <p id="oneDate"></p>
+        <p id="oneNotes"></p>
+        <p id="countdown"></p>
+
+        </div>
+
+        <!--  page 3 footer -->
+        <div data-role="footer" data-theme='a'>
+        <h1>Copyright 2020 by Tashib Alam</h1>
+        </div>
+    </div>
+    </div>
+
+        <!-- Start of  page -->
+        <div data-role="page"  id="refreshPage">
+            <!--  content -->
+            <div data-role="content" >
+                <!--  this page is used to to jump to and then back to a page to force a pagebeforeload event -->
+            </div>
+        </div>  
+
+
+    </body>
+
+    </html>

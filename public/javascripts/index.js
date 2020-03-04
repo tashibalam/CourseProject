@@ -59,7 +59,7 @@
       var ul = document.createElement('ul');
       userArray.forEach(function (element, ) {   // use handy array forEach method
         var li = document.createElement('li');
-        li.innerHTML = "<a data-transition='pop' class='onePlayer' data-parm=" + element.ID + "  href='#page3'>View Event Info </a> " + element.EventName + " " + element.ID;
+        li.innerHTML = "<a data-transition='pop' class='onePlayer' data-parm=" + element.ID + "  href='#page3'>View Event Info </a> " + element.EventName;
         ul.appendChild(li);
       });
       divUserlist.appendChild(ul)

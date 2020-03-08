@@ -28,6 +28,18 @@
     res.json(serverEventArray);
   });
 
+   /* DELETE to deleteEvent. */
+ router.delete('/deleteEvent/:ID', function(req, res) {
+  let ID = req.params.ID;
+  console.log(ID);
+  console.log('deleting ID: ' + ID);
+   for(let i=0; i < serverEventArray.length; i++) {
+     if(ID == serverEventArray[i].ID) {
+     serverEventArray.splice(i,1);
+     }
+   }
+   res.status(200).send(JSON.stringify('deleted successfully'));
+});
 
   //  router.???('/userlist', function(req, res) {
   //  users.update({name: 'foo'}, {name: 'bar'})

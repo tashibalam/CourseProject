@@ -100,6 +100,9 @@
           if (userArray.length >= 1) {
             document.getElementById("fillEvents").style.visibility = "hidden";
           }
+          else{
+            document.getElementById("fillEvents").style.visibility = "visible";
+          }
         };
 
 
